@@ -20,6 +20,8 @@ $$\rho_{gij}=\sqrt{\phi_{gij}\zeta_{gij}}$$
 
 where 
 
+$$\phi_{gij}=max\lceil \frac{min(x_{gAij})}{max(x_{gBij})},\frac{min(x_{gBij})}{max(x_{gAij})}\rceil$$
+
 
 
 
