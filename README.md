@@ -24,7 +24,7 @@ $$\varphi_{gij}=max\left[ \frac{min(x_{gAij})}{max(x_{gBij})},\frac{min(x_{gBij}
 
 and
 
-$$\zeta = ln\left(1+\frac{\bar{x_{gi}\sigma_{gi}^2+1}{\bar{x_{gAi}\sigma_{gAi}^2+\bar{x_{gBi}\sigma_{gBi}^2+1}\right)$$
+$$\zeta =  \ln\left(1+\frac{\bar{x_{gi}}\sigma_{gi}^2+1}{\bar{x_{gAi}}\sigma_{gAi}^2+\bar{x_{gBi}|\sigma_{gBi}^2+1}\right)$$
 
 
 
