@@ -9,10 +9,11 @@ where r is number of RNA sequences failed to be sequenced in RNA population (or 
 $$ 𝑝 \backsim 𝑏𝑒𝑡𝑎(𝛼,𝛽)$$
 
 We constructed an iteration algorithm to optimally estimate weight w and $\alpha$ and $\beta$ and used $\hat{\alpha}$ and $\hat{𝛽}$ to estimate 𝑝 from p initial value and variance V of 𝑝. Note that different type of RNA-seq data, the initial value of 𝑝 is different. RNA-seq data are often generated from small samples with, for example, 3 ~ 6 replicates (or libraries). Small samples have bigger divergent variances and high gap probability(see Figure 1):
+<figure>
 ![image](https://user-images.githubusercontent.com/14003650/185705154-323cf284-fb98-49ac-9ee4-84c01cea82d2.png)
-Figure 1. Statistical effect of small samples
+<figurecaption Figure 1. Statistical effect of small samples>
 The dataset was simulated from 10,000 experiments with two conditions randomly sampled from a negative binomial distribution NB(100, 50). a: variances distribution along mean. b: sorted variances along experiments. c: Probability of gap occurring between two datasets.
-
+<figure>
 
 
 
