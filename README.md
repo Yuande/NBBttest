@@ -8,7 +8,9 @@ where r is number of RNA sequences failed to be sequenced in RNA population (or 
 
 $$ 𝑝 \backsim 𝑏𝑒𝑡𝑎(𝛼,𝛽)$$
 
-We constructed an iteration algorithm to optimally estimate weight w and $\alpha$ and $\beta$ and used $\hat{\alpha}$ and $\hat{𝛽}$ to estimate 𝑝 and variance V of 𝑝. However, to estimate 𝑝 by iteration, we need an initial value of 𝑝 for each gene or each isoform
+We constructed an iteration algorithm to optimally estimate weight w and $\alpha$ and $\beta$ and used $\hat{\alpha}$ and $\hat{𝛽}$ to estimate 𝑝 from p initial value and variance V of 𝑝. Note that different type of RNA-seq data, the initial value of 𝑝 is different. RNA-seq data are often generated from small samples with, for example, 3 ~ 6 replicates (or libraries). Small samples have bigger divergent variances and high gap probability(see Figure 1):
+![image](https://user-images.githubusercontent.com/14003650/185704654-2f8a34fd-515e-4da2-8ce6-80b8c1ea876f.png)
+
 
 
 
