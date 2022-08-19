@@ -16,15 +16,15 @@ The dataset was simulated from 10,000 experiments with two conditions randomly s
 
 To handle these two statistical effects, we introduce a variable called gene-wise or isoform-wise inflation and shrinkage variable:
 
-$$\rho_{gij}=\sqrt{\varphi_{gij}\zeta_{gij}}$$
+$$\rho_{gi}=\sqrt{\varphi_{gi}\zeta_{gi}}$$
 
 where 
 
-$$\varphi_{gij}=max\left[ \frac{min(x_{gAij})}{max(x_{gBij})},\frac{min(x_{gBij})}{max(x_{gAij})}\right]$$
+$$\varphi_{gi}=max\left[ \frac{min(x_{gAij})}{max(x_{gBij})},\frac{min(x_{gBij})}{max(x_{gAij})}\right]$$
 
 and
 
-$$\zeta =  \ln\left(1+\frac{\bar{x}_{gi}\sigma_{gi}^2+1}{\bar{x}_{gAi}\sigma_{gAi}^2+\bar{x}_{gBi}\sigma_{gBi}^2+1}\right)$$
+$$\zeta_{gi} =  \ln\left(1+\frac{\bar{X}_{gi}\sigma_{gi}^2+1}{\bar{X}_{gAi}\sigma_{gAi}^2+\bar{X}_{gBi}\sigma_{gBi}^2+1}\right)$$
 
 
 
