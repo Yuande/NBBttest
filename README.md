@@ -16,7 +16,7 @@ The dataset was simulated from 10,000 experiments with two conditions randomly s
 
 To handle these two statistical effects, we introduce a variable called gene-wise or isoform-wise inflation and shrinkage variable:
 
-$$\rho_gij=\sqrt{\phi_gij\zeta_gij}$$
+$$\rho_{gij}=\sqrt{\phi_{gij}\zeta_{gij}}$$
 
 where 
 
