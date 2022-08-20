@@ -42,6 +42,18 @@ $$t_{g}^\alpha=\frac{\rho_{g}}{\omega_\alpha}t_{g}$$
 where $\omega_\alpha$ is an averaged null $\rho$ under statistical significance $\alpha$, used as threshold for $\rho $. If $\rho > \omega_\alpha$, then $𝑡^\alpha > 𝑡$, meaning t-value is inflated. This case happens when there is significant difference between conditions. If $\rho < \omega_\alpha$, then $𝑡^\alpha < 𝑡$ , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If $\rho =\omega_\alpha $, then $𝑡^\alpha = 𝑡$. This case occurs when sample size > 15.
 
 ## Install NBBttest
+Three ways to install NBBttest.
+1. NBBttest can be installed from GitHub using devtools in R Console (Mac) or RGUI(WIndows) or Rstudio:
+```
+library(devtools)
 
-
+install_github("yuande/NBBttest")
+```
+2. Directly install NBBttest from R console(Mac) or RGui(window): 
+Click package on R console or RGui and choose install package, choose CRAN mirrors and click OK and find NBBttest and click it.
+3. Use install.packages function to install NBBttest:
+```
+install.packages("NBBttest")
+```
+This way also choose CRAM mirrors.
 
