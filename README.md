@@ -35,9 +35,12 @@ $\rho_{gi}\ge 1$ means a gap between data A and B, $\rho_{gi} le 1$  means overl
 
 Test for differential screens of the ith sgRNA targeting gene g using
 $$t_{gi}^\alpha=\frac{\rho_g}{\omega_\alpha}t_{gi}$$,
-
 test for differential expression of the ith RNA isoform of gene g using 
 $$t_{gi}^\alpha=\frac{\rho_{gi}}{\omega_\alpha}t_{gi}$$,
+test for differential expression or screen of gene g using
+$$t_{g}^\alpha=\frac{\rho_{g}}{\omega_\alpha}t_{g}$$.
+where $\omega_\alpha$ is an averaged null $\rho$ under statistical significance $\alpha$, used as threshold for $\rho$. If $\rho \ge \omega_\alpha$, then $𝑡^\alpha ge 𝑡$, meaning t-value is inflated. This case happens when there is significant difference between conditions. If $\rho \le \omega_\alpha$, then $𝑡^\alpha \le 𝑡$ , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If $\rho =\omega_\alpha $, then $𝑡^\alpha = 𝑡$. This case occurs when sample size > 15.
+
 
 
 
