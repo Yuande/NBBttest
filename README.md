@@ -30,3 +30,7 @@ where
 $$\bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)$$
 and 
 $$\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}$$ where k=1 for A and 2 for B.
+
+$\rho_{gi}\ge 1$ means a gap between data A and B, $\rho_{gi} le 1$  means overlap between data A and B
+![image](https://user-images.githubusercontent.com/14003650/185755816-f3f5db3a-7174-4827-a0d9-a7d6153f14df.png)
+
