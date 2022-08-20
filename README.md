@@ -59,7 +59,7 @@ This way also choose CRAM mirrors.
 <div align="justify" markdown="1">
 **Text** Text Text.
 <span style="color:blue">some *blue* text</span>
-
+<span style="color:blue">some *This is Blue italic.* text</span>
 `Text` Text.
 </div>
 
