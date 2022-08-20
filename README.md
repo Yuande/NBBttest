@@ -26,14 +26,14 @@ and
 
 $$\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2 +\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)$$
 
-![image](https://user-images.githubusercontent.com/14003650/185755944-af875f57-81b4-4d98-a423-6b6cfedc79ea.png)
-
-
 where
 $$\bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)$$
 and 
 $$\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}$$ where k=1 for A and 2 for B.
 
-$\rho_{gi}\ge 1$ means a gap between data A and B, $\rho_{gi} le 1$  means overlap between data A and B
-![image](https://user-images.githubusercontent.com/14003650/185755816-f3f5db3a-7174-4827-a0d9-a7d6153f14df.png)
+$\rho_{gi}\ge 1$ means a gap between data A and B, $\rho_{gi} le 1$  means overlap between data A and B. 
+
+Test for differential screens of the ith sgRNA targeting gene g using
+$$t_{gi}^\alpha=\frac{\rhp_g}{\omega_\alpja}t_{gi}$$
+
 
