@@ -24,6 +24,7 @@ $$\varphi_{gi}=max\left[ \frac{min(x_{gAij})}{max(x_{gBij})},\frac{min(x_{gBij})
 
 and
 
+$$\sum_{i=1}^n X_i$$
 
 $$\zeta_{gi}=\ln\left(1+\frac{\sum_{j=1}^2+1}{B+1}\right)$$
 
