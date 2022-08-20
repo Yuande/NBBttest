@@ -29,4 +29,4 @@ $$\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_
 where
 $$\bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)$$
 and 
-$$\bar{X_{gAi}}=\frac{1}{m_A}$$
+$$\bar{X_{gAi}}=\frac{1}{m_A}\sum_{j=1}^m_A$$
