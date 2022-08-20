@@ -51,15 +51,9 @@ install_github("yuande/NBBttest")
 ```
 2. Directly install NBBttest from R console(Mac) or RGui(window): 
 Click package on R console or RGui and choose install package, choose CRAN mirrors and click OK and find NBBttest and click it.
-3. Use install.packages function to install NBBttest:
+3. Use R install.packages function to install NBBttest:
 ```
 install.packages("NBBttest")
 ```
-This way also choose CRAM mirrors.
-<div align="justify" markdown="1">
-**Text** Text Text.
-<span style="color:blue">some *blue* text</span>
-<span style="color:blue">some *This is Blue italic.* text</span>
-`Text` Text.
-</div>
+This way also needs to choose CRAM mirrors.
 
