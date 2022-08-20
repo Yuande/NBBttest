@@ -24,6 +24,19 @@ $$\varphi_{gi}=max\left[ \frac{min(x_{gAij})}{max(x_{gBij})},\frac{min(x_{gBij})
 
 and
 
+$ 
+%% Comment -- define some macros
+\def\Xbar{\overline{X}_\bullet}
+\def\sumn{\sum_{i=1}^{n}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{align}
+\sumn \left(X_i - \Xbar\right) &= \sumn X_i - \sumn \Xbar \\
+                              &= \sumn X_i - n \Xbar \\
+                              &= \sumn X_i - \sumn X_i \\
+                              &= 0
+\end{align}
+$$
+
 $$
 \def\Xbar{\overline{X}_\bullet}
 \zeta_{gi} =  \ln\left(1+\frac{\Xbar_{gi}\sigma_{gi}^2+1}{\Xbar_{gAi}\sigma_{gAi}^2+\Xbar_{gBi}\sigma_{gBi}^2+1}\right)
