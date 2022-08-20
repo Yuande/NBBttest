@@ -26,5 +26,5 @@ and
 
 $$\sum_{i=1}^n X_i$$
 
-$$\zeta_{gi}=\ln\left(1+\sum_{i=1}^n X_i\right)$$
+$$\zeta_{gi}=\ln\left(1+\frac{1}{m_A+m_B}\sum_{i=1}^n X_i\right)$$
 
