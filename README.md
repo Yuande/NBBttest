@@ -43,7 +43,7 @@ where $\omega_\alpha$ is an averaged null $\rho$ under statistical significance 
 
 ## Install NBBttest
 Three ways to install NBBttest.
-1. NBBttest can be installed from GitHub using devtools in R Console (Mac) or RGUI(WIndows) or Rstudio:
+1. NBBttest can be installed from GitHub using devtools in R Console (Mac) or RGui(WIndows) or Rstudio:
 ```
 library(devtools)
 
@@ -57,3 +57,4 @@ install.packages("NBBttest")
 ```
 This way also needs to choose CRAM mirrors.
 
+## 
