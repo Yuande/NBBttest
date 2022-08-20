@@ -56,5 +56,10 @@ Click package on R console or RGui and choose install package, choose CRAN mirro
 install.packages("NBBttest")
 ```
 This way also choose CRAM mirrors.
+<div align="justify" markdown="1">
+**Text** Text Text.
 
+
+`Text` Text.
+</div>
 <span style="color:blue">some *blue* text</span>
