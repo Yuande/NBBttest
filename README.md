@@ -26,6 +26,9 @@ and
 
 $$\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2 +\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)$$
 
+![image](https://user-images.githubusercontent.com/14003650/185755944-af875f57-81b4-4d98-a423-6b6cfedc79ea.png)
+
+
 where
 $$\bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)$$
 and 
