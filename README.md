@@ -25,5 +25,5 @@ $$\varphi_{gi}=max\left[ \frac{min(x_{gAij})}{max(x_{gBij})},\frac{min(x_{gBij})
 and
 
 
-$$\zeta_{gi}=\ln\left(1+frac{A+1}{B+1}\right)$$
+$$\zeta_{gi}=\ln\left(1+\frac{A+1}{B+1}\right)$$
 
