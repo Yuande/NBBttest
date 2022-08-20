@@ -34,6 +34,10 @@ $$\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}$$ where k=1 for A and 2 f
 $\rho_{gi}\ge 1$ means a gap between data A and B, $\rho_{gi} le 1$  means overlap between data A and B. 
 
 Test for differential screens of the ith sgRNA targeting gene g using
-$$t_{gi}^\alpha=\frac{\rho_g}{\omega_\alpha}t_{gi}$$
+$$t_{gi}^\alpha=\frac{\rho_g}{\omega_\alpha}t_{gi}$$,
+
+test for differential expression of the ith RNA isoform of gene g using 
+$$t_{gi}^\alpha=\frac{\rho_{gi}}{\omega_\alpha}t_{gi}$$,
+
 
 
