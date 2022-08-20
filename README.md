@@ -57,4 +57,15 @@ install.packages("NBBttest")
 ```
 This way also needs to choose CRAM mirrors.
 
-## 
+## Data Preparation
+When RNA-seq data have been produced from RNA sequecing experiments, user should first perform pipeline analysis of the RNA sequence read data and map RNA sequences to a reference genome. Currently many pipeline tools such as BWA, Bowtie2, tophat2, star and galaxy can be used to map and annotate RNA sequences on a reference genome. The pipeline analysis generates count matrix. The count matrix contains two parts: Annotation information and count data. Information may contain tagid (isoform_id or exon_id), geneid, gene name, chromosome, DNA strand, etc columns, depending on a pipeline tool that user used. Information columns are in the left side of the matrix. It has at least one column for geneid or tagid (isoformid). The count data contain two conditions each having several replicate libraries and must be in the right side. Here is an example:
+```
+data(jkttcell)
+
+jkttcell[1:10,]
+```
+or using head to display the data jkttcell:
+```
+head(jkttcell)
+```
+jkttcell is matrix count data generated from RNA-seq data due to differential polyadenylation in Jurkat T-cell betweem resting and stimulating statuses using BWA. Data jkttcell contains 7 columns for information of poly(A) sites in the left side and 10 columns for count data.
