@@ -20,7 +20,7 @@ $$\rho_{gi}=\sqrt{\varphi_{gi}\zeta_{gi}}$$
 
 where 
 
-$$\varphi_{gi}=max\left[ \frac{min(x_{gAij})}{max(x_{gBij})},\frac{min(x_{gBij})}{max(x_{gAij})}\right]$$
+$$\varphi_{gi}=max\left[ \frac{min(X_{gAi})}{max(X_{gBi})},\frac{min(X_{gBi})}{max(X_{gAi})}\right]$$
 
 and
 
