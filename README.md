@@ -24,7 +24,7 @@ $$\varphi_{gi}=max\left[ \frac{min(x_{gAij})}{max(x_{gBij})},\frac{min(x_{gBij})
 
 and
 
-$ 
+$$ 
 %% Comment -- define some macros
 \def\Xbar{\overline{X}_\bullet}
 \def\sumn{\sum_{i=1}^{n}}
