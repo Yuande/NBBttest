@@ -54,6 +54,6 @@ Click package on R console or RGui and choose install package, choose CRAN mirro
 3. Use install.packages function to install NBBttest:
 
 <span style="color: green"> install.packages("NBBttest") green</span>
-
+<font color='red'>test blue color font</font>
 This way also choose CRAM mirrors.
 
