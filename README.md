@@ -53,7 +53,7 @@ install_github("yuande/NBBttest")
 Click package on R console or RGui and choose install package, choose CRAN mirrors and click OK and find NBBttest and click it.
 3. Use install.packages function to install NBBttest:
 ```
-install.packages("NBBttest")
+<span style="color: green"> install.packages("NBBttest") green</span>
 ```
 This way also choose CRAM mirrors.
 
