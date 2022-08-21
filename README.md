@@ -161,3 +161,18 @@ myheatmap2(dat=result, IDcol=1, nci=7, r=6, colrs="bluered", rwcex=1.8, clcex=1.
 ```
 
 ![image](https://user-images.githubusercontent.com/14003650/185811378-9af27083-16ef-4a47-937a-4af62d309caa.png)
+
+NBBttest provides pathwayHeatmap. The pathwayHeatmap is used to show differential expressions 
+of pathways or functions between conditions. These pathways or functions were detected by function 
+annotation or gene ontology methods such as David function analysis tools or Ingenuity pathway analysis. Pathway score or pathway value is a weighted expression value across genes in a pathway or a function. The weigths of genes are given by p-values of enrichment or hit in function analysis. pathwayHeatmap need two datasets: count dataset and pathway dataset. The count dataset contain gene column, count data columns and p-value column. The pathway dataset contain pathway column and gene columns.
+```
+data(upGAm)
+data(pathwy.A.up)
+pathwayup<-pathwy.A.up
+colclass=c("1","1","1","1","2","2","2","2","2","2")
+par(mar=c(7.5,5.5,3.5,3))
+par(oma=c(3,1,1,10))
+pathwayHeatmap(dat=upGAm,pathway=pathwayup,nci=1,r1=4,r2=6,colclass=colclass,rowclass=NULL,colrs="greenred",maptitle="pathway up-expression in Group A")
+```
+
+![image](https://user-images.githubusercontent.com/14003650/185812122-007f8a93-3d13-4400-b0ee-cd9e4eb54364.png)
