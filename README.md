@@ -97,3 +97,21 @@ res<-mbetattest(X=jkttcell, nci=7, na=3, nb=3, alpha=0.05, norm="yes", side="bot
 }
 ```
 Here X is object of NBBttest, that is, cout data, "nci" is number of columns for data information such as gene_id, gene name, exon_id or isoform_id or tag_id, chrosomome,annotation, strand etc. "na" and "nb" are numbers of replicates or libraries in conditions A and B, respectively. "alpha" is significance level, the default is 0.05. "norm" indicates whether data are normalized or not. "side" indicates one-side t-test or two-side t-test. "side" has three options: "both", "up" and "down". If side="up", then p-value is given with t-test in the left tail. If side="down", p-value is given with t-test in right tail. If side ="both", p-value is given with t-test in two sides. "level" has  level has 6 options: "isoform", "sgRNA", "RNA", "splicing.gene", "polyA.gene", and "CRISPR.gene". If user's data come from poly(A) RNA-seq or splicing RNA-seq in which gene has multiple RNA isoform and wants differential splicing or differential adenylation, then user can set level="isoform". If user's data are CRISPR RNA-seq data or Small hairpin RNA-seq (shRNA-seq), then user can set level="sgRNA". "splicing.gene", "polyA.gene", and "CRISPR.gene" are options for differential expression at gene level for data from splicing RNA-seq, poly(A) RNA-seq and CRISPR RNA-seq,respectively. If user's data are RNA data where each gene has one RNA isoform, then user can set level="RNA". 
+```
+exonskip<-read.table("merge_graphs_exon_skip_C3_count.txt", header=T)
+dim(exonskip)
+res<-mbetattest(X=exonskip,nci=10,na=11,nb=10,alpha=0.05, norm="yes",side="both", level="splicing.gene")
+```
+```
+exonskp<-read.table("merge_graphs_exon_skip_C3_count.txt", header=T)
+dim(exonskp)
+exonskp[1:10,1:10]
+res<-mbetattest(X=exonskp,nci=10,na=15,nb=32,alpha=0.05, norm="yes", side="both", level="isoform")
+```
+
+```
+setwd("/Volumes/WD2/Band_data/Band_data_results/spladder_results/DDX39_GRCh38_93_gff3_result/")
+DDX39.mutek<-read.table("merge_graphs_mutex_exons_C3_count.txt",header=T)
+DDX39.mutek.isof<-mbetattest(X=DDX39.mutek, nci=12, na=3, nb=3, alpha=0.05, norm="yes",side="both", level="isoform")
+
+```
