@@ -69,3 +69,5 @@ or using head to display the data jkttcell:
 head(jkttcell)
 ```
 jkttcell is matrix count data generated from RNA-seq data due to differential polyadenylation in Jurkat T-cell betweem resting and stimulating statuses using BWA. Data jkttcell contains 7 columns for information of poly(A) sites in the left side and 10 columns for count data.
+
+## Perform differential analysis
