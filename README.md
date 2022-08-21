@@ -30,7 +30,6 @@ where
 $$\bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)$$
 and 
 $$\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}$$ where k=1 for A and 2 for B.
-
 $\rho_{gi} > 1$ means that thera is a gap between data A and B for isoform i within gene g, $\rho_{gi}<1$  means that there is an overlap between data A and B for isoform i within gene g. 
 
 Test for differential screens of the ith sgRNA targeting gene g using
@@ -70,4 +69,9 @@ head(jkttcell)
 ```
 jkttcell is matrix count data generated from RNA-seq data due to differential polyadenylation in Jurkat T-cell betweem resting and stimulating statuses using BWA. Data jkttcell contains 7 columns for information of poly(A) sites in the left side and 10 columns for count data.
 
-## Perform differential analysis
+## Check data quality
+
+
+
+
+
