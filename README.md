@@ -177,3 +177,11 @@ pathwayHeatmap(dat=upGAm,pathway=pathwayup,nci=1,r1=4,r2=6,colclass=colclass,row
 
 ![image](https://user-images.githubusercontent.com/14003650/185812122-007f8a93-3d13-4400-b0ee-cd9e4eb54364.png)
 
+## NBBplot
+NBBttest provides NBBplot to display map and expression counts of exons within a specified gene across replicates in two conditions.
+```
+data(exondata)
+
+NBBplot(res=exondata, gene="H2-DMb1", nci=9, na=3, nb=3, C1="WT", C2="KO")
+```
+![image](https://user-images.githubusercontent.com/14003650/185812883-404f75c2-c07c-4ac0-8496-0af0e1f9ecbd.png)
