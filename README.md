@@ -176,3 +176,4 @@ pathwayHeatmap(dat=upGAm,pathway=pathwayup,nci=1,r1=4,r2=6,colclass=colclass,row
 ```
 
 ![image](https://user-images.githubusercontent.com/14003650/185812122-007f8a93-3d13-4400-b0ee-cd9e4eb54364.png)
+
