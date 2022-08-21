@@ -31,7 +31,7 @@ $$\bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)$$
 and 
 $$\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}$$ where k=1 for A and 2 for B.
 
-$\rho_{gi}\ge 1$ means a gap between data A and B, $\rho_{gi} le 1$  means overlap between data A and B. 
+$\rho_{gi} > 1$ means that thera is a gap between data A and B for isoform i within gene g, $\rho_{gi}<1$  means that there is an overlap between data A and B for isoform i within gene g. 
 
 Test for differential screens of the ith sgRNA targeting gene g using
 $$t_{gi}^\alpha=\frac{\rho_g}{\omega_\alpha}t_{gi}$$
