@@ -56,6 +56,10 @@ install.packages("NBBttest")
 ```
 This way also needs to choose CRAM mirrors.
 
+```
+library(NBBttest)
+```
+
 ## Data Preparation
 When RNA-seq data have been produced from RNA sequecing experiments, user should first perform pipeline analysis of the RNA sequence read data and map RNA sequences to a reference genome. Currently many pipeline tools such as BWA, Bowtie2, tophat2, star and galaxy can be used to map and annotate RNA sequences on a reference genome. The pipeline analysis generates count matrix. The count matrix contains two parts: Annotation information and count data. Information may contain tagid (isoform_id or exon_id), geneid, gene name, chromosome, DNA strand, etc columns, depending on a pipeline tool that user used. Information columns are in the left side of the matrix. It has at least one column for geneid or tagid (isoformid). The count data contain two conditions each having several replicate libraries and must be in the right side. Here is an example:
 ```
@@ -70,8 +74,15 @@ head(jkttcell)
 jkttcell is matrix count data generated from RNA-seq data due to differential polyadenylation in Jurkat T-cell betweem resting and stimulating statuses using BWA. Data jkttcell contains 7 columns for information of poly(A) sites in the left side and 10 columns for count data.
 
 ## Check data quality
-
-
+Use QC to plot data of two replicates. The following code is an example to show plot of log2 data of replicates NS_A and NS_B in Jurkat T-cell RNA-seq data(jktcell):
+```
+data(jkttcell)
+QC(dat=jkttcell, nci=7, S1=8, S2=9, method = "plot", 
+log = "log", col = "blue", pch = 19)
+```
+Here nci is column number for data information, data begins with column 8 and ends with column 13. S1 is sample repicate1 and S2 is sample replicate2. Replicate1 is specified in column 8 and replicate2 is specified in column9. method has two options: "plot" and "heatmap" and log also has two options: "none" and 
+"log". This code outputs plot:
+![image](https://user-images.githubusercontent.com/14003650/185797051-d296446b-2d46-426e-b921-076433a76d85.png)
 
 
 
