@@ -127,4 +127,18 @@ data(DDX39_100)
 data(gtfa)
 DDX39_30<-annotat(infile=DDX39_100,mfile=gtfa,type="gene")
 ```
+## Heatmap for differential expression or differential splicing or differential CRISPR screening
+
+NBBttest has two heatmap functions: myheatmap and myheatmap2. The myheatmap uses z-score to normalize data and uses heatmap.2 to visualize differential expression of genes or isoforms detected. The myheatmap2 uses n-score to normalize the data and uses heatmap.2 to visualize differential expression of genes or isoforms detected by NBBttest.
+```
+data(result)
+colclass=c("1","1","1","2","2","2")
+oldpar <- par(no.readonly =TRUE)
+par(mar=c(7.5,5.5,3.5,1.2))
+par(oma=c(3,1,1,3))
+myheatmap (dat=result, IDcol=1, nci=7, r=6, r1=3,r2=3, colrs="terrain.colors", rowBarColor=NULL, 
+colBarColor=colclass, labrow="no", labcol="yes", rsort="yes", adjrow=c(0.3, 0.0 ), adjcol = c(1, 1) , maptitle="My heatmap")
+```
+This code outputs the following heatmap plot:
+![image](https://user-images.githubusercontent.com/14003650/185808658-ccad6681-be28-4f70-ae39-7c5b44fc4693.png)
 
