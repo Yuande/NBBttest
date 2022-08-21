@@ -160,4 +160,4 @@ par(oma=c(3,1,1,3))
 myheatmap2(dat=result, IDcol=1, nci=7, r=6, colrs="bluered", rwcex=1.8, clcex=1.8, x=10, tree="both", method="euclidean", ky=1.5, rowBarColor=NULL,  colBarColor=colclass, labrow="no", labcol="yes", adjrow=c(0.2, 0.0 ), adjcol = c(1, 1) , rwangle=0, clangle=30, maptitle="My heatmap2",keyvalue="count")
 ```
 
-![image](https://user-images.githubusercontent.com/14003650/185811333-35bcb593-3c99-44ba-b9a1-3073c9940aae.png)
+![image](https://user-images.githubusercontent.com/14003650/185811378-9af27083-16ef-4a47-937a-4af62d309caa.png)
