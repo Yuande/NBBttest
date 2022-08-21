@@ -157,6 +157,6 @@ colclass=c("1","1","1","2","2","2")
 oldpar <- par(no.readonly =TRUE)
 par(mar=c(7.5,5.5,3.5,1.2))
 par(oma=c(3,1,1,3))
-myheatmap2(dat=result, IDcol=1, nci=7, r=6, colrs="greenred", rwcex=1.8, clcex=1.8, x=10, tree="both", method="euclidean", ky=1.5, rowBarColor=NULL,  colBarColor=colclass, labrow="no", labcol="yes", adjrow=c(0.2, 0.0 ), adjcol = c(1, 1) , rwangle=0, clangle=30, maptitle="My heatmap2",keyvalue="count")
+myheatmap2(dat=result, IDcol=1, nci=7, r=6, colrs="bluered", rwcex=1.8, clcex=1.8, x=10, tree="both", method="euclidean", ky=1.5, rowBarColor=NULL,  colBarColor=colclass, labrow="no", labcol="yes", adjrow=c(0.2, 0.0 ), adjcol = c(1, 1) , rwangle=0, clangle=30, maptitle="My heatmap2",keyvalue="count")
 ```
 ![MBttest2_nscore_only](https://user-images.githubusercontent.com/14003650/185811185-ea580985-0ccd-4538-817b-67117fd1fdf4.jpg)
