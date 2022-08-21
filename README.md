@@ -185,3 +185,6 @@ data(exondata)
 NBBplot(res=exondata, gene="H2-DMb1", nci=9, na=3, nb=3, C1="WT", C2="KO")
 ```
 ![image](https://user-images.githubusercontent.com/14003650/185812883-404f75c2-c07c-4ac0-8496-0af0e1f9ecbd.png)
+
+## Reference
+Tan YD and Guda C NBBt-test: a versatile method for differential analysis of multiple types of RNA-seq data. Scientific Report, 12833 (2022). (https://www.nature.com/articles/s41598-022-15762-x)
