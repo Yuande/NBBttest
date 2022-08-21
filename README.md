@@ -83,6 +83,11 @@ log = "log", col = "blue", pch = 19)
 Here nci is column number for data information, data begins with column 8 and ends with column 13. S1 is sample repicate1 and S2 is sample replicate2. Replicate1 is specified in column 8 and replicate2 is specified in column9. method has two options: "plot" and "heatmap" and log also has two options: "none" and 
 "log". This code outputs plot:
 ![image](https://user-images.githubusercontent.com/14003650/185797051-d296446b-2d46-426e-b921-076433a76d85.png)
+```
+QC(dat=jkttcell, nci=7, method = "heatmap", log = "log")}
+```
+This code outputs heatmap of correlation efficients between replicates:
+![image](https://user-images.githubusercontent.com/14003650/185797319-3f6fd78d-0001-4811-bdc3-87215d3b7750.png)
 
 
 
