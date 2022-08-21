@@ -115,3 +115,16 @@ DDX39.mutek<-read.table("merge_graphs_mutex_exons_C3_count.txt",header=T)
 DDX39.mutek.isof<-mbetattest(X=DDX39.mutek, nci=12, na=3, nb=3, alpha=0.05, norm="yes",side="both", level="isoform")
 
 ```
+## Annotation
+Alternative splicing is detected in any element of 3'UTR, 5'UTR, exons and introns within a gene 
+using RNA-seq data where RNA reads are mapped to a reference genome. As an example for annotation, 
+the RNA-seq reads derived from human samples can be mapped onto human genome reference (GRCh38) 
+using different methods, for example, HTSeq, spladder, rMAT, cufflinks, etc. These methods can detect 
+alternative splicing sites within genes. However, none of these methods does gene annotation for users. 
+Our NBBttest offers a R function for annotating genes with exons or isoforms.
+```
+data(DDX39_100)
+data(gtfa)
+DDX39_30<-annotat(infile=DDX39_100,mfile=gtfa,type="gene")
+```
+
