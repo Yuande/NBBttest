@@ -139,6 +139,23 @@ par(oma=c(3,1,1,3))
 myheatmap (dat=result, IDcol=1, nci=7, r=6, r1=3,r2=3, colrs="terrain.colors", rowBarColor=NULL, 
 colBarColor=colclass, labrow="no", labcol="yes", rsort="yes", adjrow=c(0.3, 0.0 ), adjcol = c(1, 1) , maptitle="My heatmap")
 ```
-This code outputs the following heatmap plot:
+"dat" is result outputted by mbetattest and contain data information columns(in this example, data information column =7), data columns(r, r1 and r2)  and t-test result column. The t-test result columns must have "selection" or "select" column that lists "1" for DE genes (or DE isoforms) or "0" for no differentially expressed genes or isoforms. This code outputs the following heatmap plot:
 ![image](https://user-images.githubusercontent.com/14003650/185808658-ccad6681-be28-4f70-ae39-7c5b44fc4693.png)
 
+myheatmap2 uses selection to choose genes or isoforms in the data and then to normalize the selected data by 
+using n-scale. Different from z-score, n-score does not follow standard normal distribution with mean = 0 and 
+variance =1 for all rows but it has the same largest count in all rows and shows multiple colors for numeric 
+difference between two conditions. The myheatmap2  has multiple options to select map color, distance, cluster 
+and x-lab and y-lab angles. It can be able to display multiple datasets in two ways: if multiple 
+datasets have the same row names or features, the these datasets are put onto the different columns separated 
+with empty column named with dataset names. If multiple datasets have the same column names of the datasets, 
+then put them on different rows saparated with empty rows named with dataset names or whatever names user 
+specifies.  
+```
+data(result)
+colclass=c("1","1","1","2","2","2")
+oldpar <- par(no.readonly =TRUE)
+par(mar=c(7.5,5.5,3.5,1.2))
+par(oma=c(3,1,1,3))
+myheatmap2(dat=result, IDcol=1, nci=7, r=6, colrs="greenred", rwcex=1.8, clcex=1.8, x=10, tree="both", method="euclidean", ky=1.5, rowBarColor=NULL,  colBarColor=colclass, labrow="no", labcol="yes", adjrow=c(0.2, 0.0 ), adjcol = c(1, 1) , rwangle=0, clangle=30, maptitle="My heatmap2",keyvalue="count")
+```
