@@ -89,5 +89,11 @@ QC(dat=jkttcell, nci=7, method = "heatmap", log = "log")}
 This code outputs heatmap of correlation efficients between replicates:
 ![image](https://user-images.githubusercontent.com/14003650/185797319-3f6fd78d-0001-4811-bdc3-87215d3b7750.png)
 
-
-
+## Perform differential analysis
+NBBttest has mbetattest function. This function performs differential expression of genes(RNA), differential splicing of RNA-isoforms, differential adenylation of RNA-isoforms (poly(A)), differential CRISPR screening.
+```
+data(jkttcell) 
+res<-mbetattest(X=jkttcell, nci=7, na=3, nb=3, alpha=0.05, norm="yes", side="both",level="isoform",padjust_methods="fdr",C=0)
+}
+```
+Here X is object of NBBttest, that is, cout data, "nci" is number of columns for data information such as gene_id, gene name, exon_id or isoform_id or tag_id, chrosomome,annotation, strand etc. "na" and "nb" are numbers of replicates or libraries in conditions A and B, respectively. "alpha" is significance level, the default is 0.05. "norm" indicates whether data are normalized or not. "side" indicates one-side t-test or two-side t-test. "side" has three options: "both", "up" and "down". If side="up", then p-value is given with t-test in the left tail. If side="down", p-value is given with t-test in right tail. If side ="both", p-value is given with t-test in two sides. "level" has  level has 6 options: "isoform", "sgRNA", "RNA", "splicing.gene", "polyA.gene", and "CRISPR.gene". If user's data come from poly(A) RNA-seq or splicing RNA-seq in which gene has multiple RNA isoform and wants differential splicing or differential adenylation, then user can set level="isoform". If user's data are CRISPR RNA-seq data or Small hairpin RNA-seq (shRNA-seq), then user can set level="sgRNA". "splicing.gene", "polyA.gene", and "CRISPR.gene" are options for differential expression at gene level for data from splicing RNA-seq, poly(A) RNA-seq and CRISPR RNA-seq,respectively. If user's data are RNA data where each gene has one RNA isoform, then user can set level="RNA". 
