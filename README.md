@@ -72,7 +72,7 @@ or using head to display the data jkttcell:
 ```
 head(jkttcell)
 ```
-jkttcell is matrix count data generated from RNA-seq data due to differential polyadenylation in Jurkat T-cell betweem resting and stimulating statuses using BWA. Data jkttcell contains 7 columns for information of poly(A) sites in the left side and 10 columns for count data.
+Data jkttcell is a matrix count dataset generated from RNA-seq data due to differential polyadenylation in Jurkat T-cell betweem resting and stimulating statuses using BWA. Data jkttcell contains 7 columns for information of poly(A) sites in the left side and 10 columns for count data.
 
 ## Check data quality
 Use QC to plot data of two replicates. The following code is an example to show plot of log2 data of replicates NS_A and NS_B in Jurkat T-cell RNA-seq data(jktcell):
@@ -84,11 +84,13 @@ log = "log", col = "blue", pch = 19)
 Here nci is column number for data information, data begins with column 8 and ends with column 13. S1 is sample repicate1 and S2 is sample replicate2. Replicate1 is specified in column 8 and replicate2 is specified in column9. method has two options: "plot" and "heatmap" and log also has two options: "none" and 
 "log". This code outputs plot:
 ![image](https://user-images.githubusercontent.com/14003650/185797051-d296446b-2d46-426e-b921-076433a76d85.png)
+Figure 2. QCplot of count data of two replicate libraries in no stimulated cells. Replicate libraries NS A and NS B have high correlation: All data dots follow on neighbor area of diagonal line.
 ```
 QC(dat=jkttcell, nci=7, method = "heatmap", log = "log")}
 ```
 This code outputs heatmap of correlation efficients between replicates:
 ![image](https://user-images.githubusercontent.com/14003650/185797319-3f6fd78d-0001-4811-bdc3-87215d3b7750.png)
+Figure 3. Heatmap for correlation coefficients between replicate libraries. NS_A, NS_B, and NS_C are replicate libraries in no stimulated cells and 48h_A, 48h_B and 48h_C are replicate libraries 48h stimulated cells.
 
 ## Perform differential analysis
 NBBttest has mbetattest function. This function performs differential expression of genes(RNA), differential splicing of RNA-isoforms, differential adenylation of RNA-isoforms (poly(A)), differential CRISPR screening.
@@ -97,7 +99,7 @@ data(jkttcell)
 res<-mbetattest(X=jkttcell, nci=7, na=3, nb=3, alpha=0.05, norm="yes", side="both",level="isoform",padjust_methods="fdr",C=0)
 }
 ```
-Here X is object of NBBttest, that is, cout data, "nci" is number of columns for data information such as gene_id, gene name, exon_id or isoform_id or tag_id, chrosomome,annotation, strand etc. "na" and "nb" are numbers of replicates or libraries in conditions A and B, respectively. "alpha" is significance level, the default is 0.05. "norm" indicates whether data are normalized or not. "side" indicates one-side t-test or two-side t-test. "side" has three options: "both", "up" and "down". If side="up", then p-value is given with t-test in the left tail. If side="down", p-value is given with t-test in right tail. If side ="both", p-value is given with t-test in two sides. "level" has  level has 6 options: "isoform", "sgRNA", "RNA", "splicing.gene", "polyA.gene", and "CRISPR.gene". If user's data come from poly(A) RNA-seq or splicing RNA-seq in which gene has multiple RNA isoform and wants differential splicing or differential adenylation, then user can set level="isoform". If user's data are CRISPR RNA-seq data or Small hairpin RNA-seq (shRNA-seq), then user can set level="sgRNA". "splicing.gene", "polyA.gene", and "CRISPR.gene" are options for differential expression at gene level for data from splicing RNA-seq, poly(A) RNA-seq and CRISPR RNA-seq,respectively. If user's data are RNA data where each gene has one RNA isoform, then user can set level="RNA". 
+Here X is an object of NBBttest, that is, cout data, "nci" is number of columns for data information such as gene_id, gene name, exon_id or isoform_id or tag_id, chrosomome,annotation, strand etc. "na" and "nb" are numbers of replicates or libraries in conditions A and B, respectively. "alpha" is significance level, the default is 0.05. "norm" indicates whether data are normalized or not. "side" indicates one-side t-test or two-side t-test. "side" has three options: "both", "up" and "down". If side="up", then p-value is given with t-test in the left tail. If side="down", p-value is given with t-test in right tail. If side ="both", p-value is given with t-test in two sides. "level" has  level has 6 options: "isoform", "sgRNA", "RNA", "splicing.gene", "polyA.gene", and "CRISPR.gene". If user's data come from poly(A) RNA-seq or splicing RNA-seq in which gene has multiple RNA isoform and wants differential splicing or differential adenylation, then user can set level="isoform". If user's data are CRISPR RNA-seq data or Small hairpin RNA-seq (shRNA-seq), then user can set level="sgRNA". "splicing.gene", "polyA.gene", and "CRISPR.gene" are options for differential expression at gene level for data from splicing RNA-seq, poly(A) RNA-seq and CRISPR RNA-seq,respectively. If user's data are RNA data where each gene has one RNA isoform, then user can set level="RNA". 
 ```
 exonskip<-read.table("merge_graphs_exon_skip_C3_count.txt", header=T)
 dim(exonskip)
@@ -142,6 +144,7 @@ colBarColor=colclass, labrow="no", labcol="yes", rsort="yes", adjrow=c(0.3, 0.0 
 ```
 "dat" is result outputted by mbetattest and contain data information columns(in this example, data information column =7), data columns(r, r1 and r2)  and t-test result column. The t-test result columns must have "selection" or "select" column that lists "1" for DE genes (or DE isoforms) or "0" for no differentially expressed genes or isoforms. This code outputs the following heatmap plot:
 ![image](https://user-images.githubusercontent.com/14003650/185808658-ccad6681-be28-4f70-ae39-7c5b44fc4693.png)
+Figure 4. Heatmap made with z-score for differential expressions of pol(A) RNA isoforms between stimulated and no stimulated cells.
 
 myheatmap2 uses selection to choose genes or isoforms in the data and then to normalize the selected data by 
 using n-scale. Different from z-score, n-score does not follow standard normal distribution with mean = 0 and 
@@ -160,8 +163,8 @@ par(mar=c(7.5,5.5,3.5,1.2))
 par(oma=c(3,1,1,3))
 myheatmap2(dat=result, IDcol=1, nci=7, r=6, colrs="bluered", rwcex=1.8, clcex=1.8, x=10, tree="both", method="euclidean", ky=1.5, rowBarColor=NULL,  colBarColor=colclass, labrow="no", labcol="yes", adjrow=c(0.2, 0.0 ), adjcol = c(1, 1) , rwangle=0, clangle=30, maptitle="My heatmap2",keyvalue="count")
 ```
-
 ![image](https://user-images.githubusercontent.com/14003650/185811378-9af27083-16ef-4a47-937a-4af62d309caa.png)
+Figure 5. Heatmap made with n-score for differential expressions of pol(A) RNA isoforms between stimulated and no stimulated cells.
 
 NBBttest provides pathwayHeatmap. The pathwayHeatmap is used to show differential expressions 
 of pathways or functions between conditions. These pathways or functions were detected by function 
@@ -186,6 +189,7 @@ data(exondata)
 NBBplot(res=exondata, gene="H2-DMb1", nci=9, na=3, nb=3, C1="WT", C2="KO")
 ```
 ![image](https://user-images.githubusercontent.com/14003650/185812883-404f75c2-c07c-4ac0-8496-0af0e1f9ecbd.png)
+In Figure
 
 ## Reference
 Tan YD and Guda C NBBt-test: a versatile method for differential analysis of multiple types of RNA-seq data. Scientific Report, 12833 (2022). (https://www.nature.com/articles/s41598-022-15762-x)
