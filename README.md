@@ -79,8 +79,7 @@ Data jkttcell is a matrix count dataset generated from RNA-seq data due to diffe
 Use QC to plot data of two replicates. The following code is an example to show plot of log2 data of replicates NS_A and NS_B in Jurkat T-cell RNA-seq data(jktcell):
 ```
 data(jkttcell)
-QC(dat=jkttcell, nci=7, S1=8, S2=9, method = "plot", 
-log = "log", col = "blue", pch = 19)
+QC(dat=jkttcell, nci=7, S1=8, S2=9, method = "plot", log = "log", col = "blue", pch = 19)
 ```
 Here "nci" is column number for data information, data begins with column 8 and ends with column 13. S1 is sample repicate1 and S2 is sample replicate2. Replicate1 is specified in column 8 and replicate2 is specified in column9. "method" has two options: "plot" and "heatmap" and log also has two options: "none" and 
 "log". This code outputs plot:
@@ -104,6 +103,7 @@ res<-mbetattest(X=jkttcell, nci=7, na=3, nb=3, alpha=0.05, norm="yes", side="bot
 }
 ```
 Here X is an object of NBBttest, that is, cout data, "nci" is number of columns for data information such as gene_id, gene name, exon_id or isoform_id or tag_id, chrosomome,annotation, strand etc. "na" and "nb" are numbers of replicates or libraries in conditions A and B, respectively. "alpha" is significance level, the default is 0.05. "norm" indicates whether data are normalized or not. "side" indicates one-side t-test or two-side t-test. "side" has three options: "both", "up" and "down". If side="up", then p-value is given with t-test in the left tail. If side="down", p-value is given with t-test in right tail. If side ="both", p-value is given with t-test in two sides. "level" has 6 options: "isoform", "sgRNA", "RNA", "splicing.gene", "polyA.gene", and "CRISPR.gene". If user's data come from poly(A) RNA-seq or splicing RNA-seq in which gene has multiple RNA isoform and wants differential splicing or differential adenylation, then user can set level="isoform". If user's data are CRISPR RNA-seq data or small hairpin RNA-seq (shRNA-seq), then user can set level="sgRNA". "splicing.gene", "polyA.gene", and "CRISPR.gene" are options for differential expression at gene level for data from splicing RNA-seq, poly(A) RNA-seq and CRISPR RNA-seq,respectively. If user's data are RNA data where each gene has one RNA isoform, then user can set level="RNA". 
+
 ```
 exonskip<-read.table("merge_graphs_exon_skip_C3_count.txt", header=T)
 dim(exonskip)
