@@ -148,10 +148,10 @@ colBarColor=colclass, labrow="no", labcol="yes", rsort="yes", adjrow=c(0.3, 0.0 
 ```
 "dat" is result outputted by mbetattest and contain data information columns(in this example, data information column =7), data columns(r, r1 and r2)  and t-test result column. The t-test result columns must have "selection" or "select" column that lists "1" for DE genes (or DE isoforms) or "0" for no differentially expressed genes or isoforms. This code outputs the following heatmap plot:
 ![image](https://user-images.githubusercontent.com/14003650/185808658-ccad6681-be28-4f70-ae39-7c5b44fc4693.png)
+
 Figure 4. Heatmap made with z-score for differential expressions of pol(A) RNA isoforms between stimulated and no stimulated cells.
 
-myheatmap2 uses selection to choose genes or isoforms in the data and then to normalize the selected data by 
-using n-scale. Different from z-score, n-score does not follow standard normal distribution with mean = 0 and 
+The myheatmap2 uses selection to choose genes or isoforms in the data and then uses n-scale to normalize the selected data. Different from z-score, n-score does not follow standard normal distribution with mean = 0 and 
 variance =1 for all rows but it has the same largest count in all rows and shows multiple colors for numeric 
 difference between two conditions. The myheatmap2  has multiple options to select map color, distance, cluster 
 and x-lab and y-lab angles. It can be able to display multiple datasets in two ways: if multiple 
@@ -159,6 +159,7 @@ datasets have the same row names or features, the these datasets are put onto th
 with empty column named with dataset names. If multiple datasets have the same column names of the datasets, 
 then put them on different rows saparated with empty rows named with dataset names or whatever names user 
 specifies.  
+
 ```
 data(result)
 colclass=c("1","1","1","2","2","2")
@@ -168,11 +169,13 @@ par(oma=c(3,1,1,3))
 myheatmap2(dat=result, IDcol=1, nci=7, r=6, colrs="bluered", rwcex=1.8, clcex=1.8, x=10, tree="both", method="euclidean", ky=1.5, rowBarColor=NULL,  colBarColor=colclass, labrow="no", labcol="yes", adjrow=c(0.2, 0.0 ), adjcol = c(1, 1) , rwangle=0, clangle=30, maptitle="My heatmap2",keyvalue="count")
 ```
 ![image](https://user-images.githubusercontent.com/14003650/185811378-9af27083-16ef-4a47-937a-4af62d309caa.png)
+
 Figure 5. Heatmap made with n-score for differential expressions of pol(A) RNA isoforms between stimulated and no stimulated cells.
 
-NBBttest provides pathwayHeatmap. The pathwayHeatmap is used to show differential expressions 
+NBBttest also provides pathwayHeatmap. The pathwayHeatmap function is used to show differential expressions 
 of pathways or functions between conditions. These pathways or functions were detected by function 
-annotation or gene ontology methods such as David function analysis tools or Ingenuity pathway analysis. Pathway score or pathway value is a weighted expression value across genes in a pathway or a function. The weigths of genes are given by p-values of enrichment or hit in function analysis. pathwayHeatmap need two datasets: count dataset and pathway dataset. The count dataset contain gene column, count data columns and p-value column. The pathway dataset contain pathway column and gene columns.
+annotation or gene ontology methods such as David function analysis tools or Ingenuity pathway analysis or Metascape. The p-values for DE genes are used as weights for expression value across genes in a pathway or a function. The pathwayHeatmap function needs two datasets: count dataset and pathway dataset. The count dataset contain gene column, count data columns and p-value column. The pathway dataset contain pathway column and gene columns.
+
 ```
 data(upGAm)
 data(pathwy.A.up)
@@ -185,6 +188,8 @@ pathwayHeatmap(dat=upGAm,pathway=pathwayup,nci=1,r1=4,r2=6,colclass=colclass,row
 
 ![image](https://user-images.githubusercontent.com/14003650/185812122-007f8a93-3d13-4400-b0ee-cd9e4eb54364.png)
 
+Figure 6. Heatmap for pathways.
+
 ## NBBplot
 NBBttest provides NBBplot to display map and expression counts of exons within a specified gene across replicates in two conditions.
 ```
@@ -193,7 +198,8 @@ data(exondata)
 NBBplot(res=exondata, gene="H2-DMb1", nci=9, na=3, nb=3, C1="WT", C2="KO")
 ```
 ![image](https://user-images.githubusercontent.com/14003650/185812883-404f75c2-c07c-4ac0-8496-0af0e1f9ecbd.png)
-In Figure
+
+Figure 7. NBBplot for differential expression of exons in gene H2-DMb1. The top part is expressions of exons across replicates in two conditions KO and WT. The bottum part is phyical map of exons in gene H2-DMb1. The red boxes are DE exons.
 
 ## Reference
 Tan YD and Guda C NBBt-test: a versatile method for differential analysis of multiple types of RNA-seq data. Scientific Report, 12833 (2022). (https://www.nature.com/articles/s41598-022-15762-x)
