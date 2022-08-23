@@ -5,7 +5,7 @@ NBBttest is R package for implementing negative binomial beta t-test (or called 
 
 $$x \backsim NB\left(p,r\right)$$
 
-where r is number of RNA sequences failed to be sequenced in RNA population (or RNA library) and p is  proportion of the sequenced RNA species in RNA library and follows beta distibution with parameters  $\alpha$ and   $\beta$ : 
+where r is number of RNA sequences failed to be sequenced in RNA population (or RNA library) and p is  proportion of the sequenced RNA species in RNA library and follows beta distibution with parameters $\alpha$ and $\beta$: 
 
 $$𝑝 \backsim 𝑏𝑒𝑡𝑎(𝛼,𝛽)$$
 
