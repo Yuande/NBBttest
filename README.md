@@ -15,7 +15,7 @@ To handle these two statistical effects, we introduce a variable called gene-wis
 where 
 
 
-![\Large \varphi_{gi}=max\left[ \frac{min(X_{gAi})}{max(X_{gBi})},\frac{min(X_{gBi})}{max(X_{gAi})}\right]](https://latex.codecogs.com/svg.latex?\Large&space;\varphi_{gi}=max\left[ \frac{min(X_{gAi})}{max(X_{gBi})},\frac{min(X_{gBi})}{max(X_{gAi})}\right]) 
+![\Large \varphi_{gi}=max\left[\frac{min(X_{gAi})}{max(X_{gBi})},\frac{min(X_{gBi})}{max(X_{gAi})}\right]](https://latex.codecogs.com/svg.latex?\Large&space;\varphi_{gi}=max\left[\frac{min(X_{gAi})}{max(X_{gBi})},\frac{min(X_{gBi})}{max(X_{gAi})}\right]) 
 
 and
 
