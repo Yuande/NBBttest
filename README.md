@@ -10,10 +10,11 @@ The dataset was simulated from 10,000 experiments with two conditions randomly s
 
 To handle these two statistical effects, we introduce a variable called gene-wise or isoform-wise inflation-shrinkage variable: 
 
-$$\rho_{gi}=\sqrt{\varphi_{gi}\zeta_{gi}}$$  
+%%$$\rho_{gi}=\sqrt{\varphi_{gi}\zeta_{gi}}$$  
 ![\Large \rho_{gi}=\sqrt{\varphi_{gi}\zeta{gi}}](https://latex.codecogs.com/svg.latex?\Large&space;\rho_{gi}=\sqrt{\varphi_{gi}\zeta{gi}}) 
 
 where 
+![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}) 
 
 $$\varphi_{gi}=max\left[ \frac{min(X_{gAi})}{max(X_{gBi})},\frac{min(X_{gBi})}{max(X_{gAi})}\right]$$
 
