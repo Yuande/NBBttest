@@ -10,7 +10,7 @@ The dataset was simulated from 10,000 experiments with two conditions randomly s
 
 To handle these two statistical effects, we introduce a variable called gene-wise or isoform-wise inflation-shrinkage variable: 
 
-$$\rho_{gi}=\sqrt{\varphi_{gi}\zeta{gi}}$$
+$$\rho_{gi}=\sqrt{\varphi_{gi}\zeta_{gi}}$$
 
 where 
 
@@ -23,13 +23,12 @@ $$\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2+1}{\bar{X_{gAi}}\sigma_{
 
 where 
 
-![\Large \bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)](https://latex.codecogs.com/svg.latex?\Large&space;\bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)) 
+$$\bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)$$
 
 
 and 
 
-
-![\Large \bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k}x_{gkij}](https://latex.codecogs.com/svg.latex?\Large&space;\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k}x_{gkij}) 
+$$\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k}x_{gkij}$$
 
 
 where k=1 for A and 2 for B. $\rho_{gi} > 1$ means that thera is a gap between data A and B for isoform i within gene g, $\rho_{gi}<1$  means that there is an overlap between data A and B for isoform i within gene g. 
