@@ -20,7 +20,8 @@ where
 and
 
 
-![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}) 
+![\Large \zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2+1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+1}\right]](https://latex.codecogs.com/svg.latex?\Large&space;\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2+1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+1}\right]) 
+
 
 ![\Large \zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)](https://latex.codecogs.com/svg.latex?\Large&space;\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)) 
 
