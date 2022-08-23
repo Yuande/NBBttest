@@ -21,9 +21,7 @@ and
 
 
 ![\Large \zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2+1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+1}\right)](https://latex.codecogs.com/svg.latex?\Large&space;\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2+1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+1}\right)) 
-
-
-![\Large \zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)](https://latex.codecogs.com/svg.latex?\Large&space;\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)) 
+ 
 
 where 
 
@@ -32,7 +30,9 @@ where
 
 and 
 
-$$\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}$$ 
+
+![\Large \bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}](https://latex.codecogs.com/svg.latex?\Large&space;\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}) 
+
 
 where k=1 for A and 2 for B. $\rho_{gi} > 1$ means that thera is a gap between data A and B for isoform i within gene g, $\rho_{gi}<1$  means that there is an overlap between data A and B for isoform i within gene g. 
 
