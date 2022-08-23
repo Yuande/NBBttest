@@ -81,7 +81,7 @@ Use QC to plot data of two replicates. The following code is an example to show 
 data(jkttcell)
 QC(dat=jkttcell, nci=7, S1=8, S2=9, method = "plot", log = "log", col = "blue", pch = 19)
 ```
-Here "nci" is column number for data information, data begins with column 8 and ends with column 13. S1 is sample repicate1 and S2 is sample replicate2. Replicate1 is specified in column 8 and replicate2 is specified in column9. "method" has two options: "plot" and "heatmap" and log also has two options: "none" and 
+Here "nci" is column number for data information, data begins with column 8 and ends with column 13. S1 is sample repicate1 and S2 is sample replicate2. Replicate1 is specified in column 8 and replicate2 is specified in column 9. "method" has two options: "plot" and "heatmap" and log also has two options: "none" and 
 "log". This code outputs plot:
 ![image](https://user-images.githubusercontent.com/14003650/185797051-d296446b-2d46-426e-b921-076433a76d85.png)
 
