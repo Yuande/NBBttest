@@ -7,7 +7,7 @@ NBBttest is R package for implementing negative binomial beta t-test (or called 
 
 Figure 1. Statistical effect of small samples
 The dataset was simulated from 10,000 experiments with two conditions randomly sampled from a negative binomial distribution NB(100, 50). a: variances distribution along mean. b: sorted variances along experiments. c: Probability of gap occurring between two datasets.
-
+$\alpha$
 To handle these two statistical effects, we introduce a variable called gene-wise or isoform-wise inflation-shrinkage variable: 
 
 ![\Large \rho_{gi}=\sqrt{\varphi_{gi}\zeta{gi}}](https://latex.codecogs.com/svg.latex?\Large&space;\rho_{gi}=\sqrt{\varphi_{gi}\zeta{gi}}) 
