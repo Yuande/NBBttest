@@ -4,7 +4,7 @@ NBBttest is R package for implementing negative binomial beta t-test (or called 
 
  $$ x \backsim NB(p,r)$$
  
-where r is number of RNA sequences failed to be sequenced in RNA population (or RNA library) and p is proportion of the sequenced RNA species in RNA library and follows beta distibution with parameters$\alpha$and$beta$:
+where r is number of RNA sequences failed to be sequenced in RNA population (or RNA library) and p is proportion of the sequenced RNA species in RNA library and follows beta distibution with parameters $\alpha$ and $beta$:
 
 $$ 𝑝 \backsim 𝑏𝑒𝑡𝑎(𝛼,𝛽)$$
 
@@ -35,8 +35,7 @@ and
 
 $$\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}$$ 
 
-where k=1 for A and 2 for B.
-$\rho_{gi} > 1$ means that thera is a gap between data A and B for isoform i within gene g, $\rho_{gi}<1$  means that there is an overlap between data A and B for isoform i within gene g. 
+where k=1 for A and 2 for B. $\rho_{gi} > 1$ means that thera is a gap between data A and B for isoform i within gene g, $\rho_{gi}<1$  means that there is an overlap between data A and B for isoform i within gene g. 
 
 Test for differential screens of the ith sgRNA targeting gene g using
 
@@ -50,7 +49,7 @@ test for differential expression or screen of gene g using
 
 $$t_{g}^\alpha=\frac{\rho_{g}}{\omega_\alpha}t_{g}$$
 
-where $\omega_\alpha$ is an averaged null $\rho$ under statistical significance $\alpha$, used as threshold for $\rho$. If $\rho > \omega_\alpha$, then $𝑡^\alpha > 𝑡$, meaning t-value is inflated. This case happens when there is significant difference between conditions. If $\rho < \omega_\alpha$, then $𝑡^\alpha < 𝑡$ , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If $\rho =\omega_\alpha $, then $𝑡^\alpha = 𝑡$. This case occurs when sample size > 15.
+where $\omega_\alpha$ is an averaged null $\rho$ under statistical significance $\alpha$, used as threshold for $\rho$. If $\rho > \omega_\alpha$, then $𝑡^\alpha > 𝑡$, meaning t-value is inflated. This case happens when there is significant difference between conditions. If $\rho < \omega_\alpha$, then $𝑡^\alpha < 𝑡$ , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If $\rho =\omega_\alpha$, then $𝑡^\alpha = 𝑡$. This case occurs when sample size > 15.
 In current differential analysis of RNA-seq, NBBt-test has the lowest type I error rate and the best performance in small samples.
 
 ## Install NBBttest
