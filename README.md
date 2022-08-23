@@ -19,7 +19,8 @@ where
 
 and
 
-$$\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)$$ 
+
+![\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)](https://latex.codecogs.com/svg.latex?\Large&space;\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2+\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)) 
 
 where 
 
