@@ -8,6 +8,8 @@ NBBttest is R package for implementing negative binomial beta t-test (or called 
 Figure 1. Statistical effect of small samples
 The dataset was simulated from 10,000 experiments with two conditions randomly sampled from a negative binomial distribution NB(100, 50). a: variances distribution along mean. b: sorted variances along experiments. c: Probability of gap occurring between two datasets.
 
+![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}) 
+
 To handle these two statistical effects, we introduce a variable called gene-wise or isoform-wise inflation-shrinkage variable: 
 
 $$\rho_{gi}=\sqrt{\varphi_{gi}\zeta_{gi}}$$  
@@ -42,8 +44,7 @@ test for differential expression or screen of gene g using
 
 $$t_{g}^\alpha=\frac{\rho_{g}}{\omega_\alpha}t_{g}$$
 
-where $\omega_\alpha $ is an averaged null $\rho $ under statistical significance $\alpha $, used as threshold for $\rho $. If $\rho > \omega_\alpha $, then $𝑡^\alpha > 𝑡$, meaning t-value is inflated. This case happens when there is significant difference between conditions. If $\rho < \omega_\alpha$, then $𝑡^\alpha < 𝑡$ , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If $\rho =\omega_\alpha$, then $𝑡^\alpha = 𝑡$. This case occurs when sample size > 15.
-In current differential analysis of RNA-seq, NBBt-test has the lowest type I error rate and the best performance in small samples.
+where $\omega_\alpha$ is an averaged null $\rho$ under statistical significance $\alpha$, used as threshold for $\rho $. If $\rho > \omega_\alpha$, then $𝑡^\alpha > 𝑡$, meaning t-value is inflated. This case happens when there is significant difference between conditions. If $\rho < \omega_\alpha$, then $𝑡^\alpha < 𝑡$ , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If $\rho =\omega_\alpha$, then $𝑡^\alpha = 𝑡$. This case occurs when sample size > 15. In current differential analysis of RNA-seq, NBBt-test has the lowest type I error rate and the best performance in small samples.
 
 ## Install NBBttest
 Three ways to install NBBttest.
