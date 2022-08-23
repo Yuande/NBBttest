@@ -9,9 +9,9 @@ Figure 1. Statistical effect of small samples
 The dataset was simulated from 10,000 experiments with two conditions randomly sampled from a negative binomial distribution NB(100, 50). a: variances distribution along mean. b: sorted variances along experiments. c: Probability of gap occurring between two datasets.
 
 To handle these two statistical effects, we introduce a variable called gene-wise or isoform-wise inflation-shrinkage variable: 
-
-$$\rho_{gi}=\sqrt{\varphi_{gi}\zeta_{gi}}$$
-
+```math
+\rho_{gi}=\sqrt{\varphi_{gi}\zeta_{gi}}
+```
 where 
 
 $$\varphi_{gi}=max\left[\frac{min(X_{gAi})}{max(X_{gBi})},\frac{min(X_{gBi})}{max(X_{gAi})}\right]$$
