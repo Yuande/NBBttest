@@ -55,9 +55,9 @@ $$t_{g}^\alpha=\frac{\rho_{g}}{\omega_\alpha}t_{g}$$
 
 where $\omega_\alpha$ is an averaged null $\rho$ under statistical significance $\alpha$, used as threshold for $\rho $. If $\rho > \omega_\alpha$, then $𝑡^\alpha > 𝑡$, meaning t-value is inflated. This case happens when there is significant difference between conditions. If $\rho < \omega_\alpha$, then $𝑡^\alpha < 𝑡$ , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If $\rho =\omega_\alpha$, then $𝑡^\alpha = 𝑡$. This case occurs when sample size > 15. In current differential analysis of RNA-seq, NBBt-test has the lowest type I error rate and the best performance in small samples.
 
-where 𝜔_𝛼 is an averaged null 𝜌 under statistical significance 𝛼, used as threshold for 𝜌. If 𝜌>𝜔_𝛼, then 𝑡^𝛼>𝑡, meaning t-value is inflated. This case happens when there is significant difference between conditions. If 𝜌<𝜔_𝛼, then 𝑡^𝛼<𝑡 , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If 𝜌=𝜔_𝛼, then 𝑡^𝛼=𝑡. This case occurs when sample size > 15.
+where 𝜔_𝛼![image](https://user-images.githubusercontent.com/14003650/186207258-8547da6b-4905-4ab4-9140-8dce65286c11.png)
+𝜔_𝛼 is an averaged null 𝜌 under statistical significance 𝛼, used as threshold for 𝜌. If 𝜌>𝜔_𝛼, then 𝑡^𝛼>𝑡, meaning t-value is inflated. This case happens when there is significant difference between conditions. If 𝜌<𝜔_𝛼, then 𝑡^𝛼<𝑡 , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If 𝜌=𝜔_𝛼, then 𝑡^𝛼=𝑡. This case occurs when sample size > 15.
 
-![image](https://user-images.githubusercontent.com/14003650/186206776-905f427b-597e-4d2e-8e2c-a11a4add919f.png)
 
 ## Install NBBttest
 Three ways to install NBBttest.
