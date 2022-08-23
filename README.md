@@ -28,16 +28,24 @@ and
 $$\zeta_{gi}=\ln\left(1+\frac{\bar{X_{gi}}\sigma_{gi}^2 +1}{\bar{X_{gAi}}\sigma_{gAi}^2 +\bar{X_{gBi}}\sigma_{gBi}^2+ 1}\right)$$
 
 where
+
 $$\bar{X_{gi}}=\frac{1}{2}\left(\bar{X_{gAi}}+\bar{X_{gBi}}\right)$$
+
 and 
+
 $$\bar{X_{gki}}=\frac{1}{m_k}\sum_{j=1}^{m_k} x_{gkij}$$ where k=1 for A and 2 for B.
 $\rho_{gi} > 1$ means that thera is a gap between data A and B for isoform i within gene g, $\rho_{gi}<1$  means that there is an overlap between data A and B for isoform i within gene g. 
 
 Test for differential screens of the ith sgRNA targeting gene g using
+
 $$t_{gi}^\alpha=\frac{\rho_g}{\omega_\alpha}t_{gi}$$
+
 test for differential expression of the ith RNA isoform of gene g using 
+
 $$t_{gi}^\alpha=\frac{\rho_{gi}}{\omega_\alpha}t_{gi}$$
+
 test for differential expression or screen of gene g using
+
 $$t_{g}^\alpha=\frac{\rho_{g}}{\omega_\alpha}t_{g}$$
 
 where $\omega_\alpha$ is an averaged null $\rho$ under statistical significance $\alpha$, used as threshold for $\rho$. If $\rho > \omega_\alpha$, then $𝑡^\alpha > 𝑡$, meaning t-value is inflated. This case happens when there is significant difference between conditions. If $\rho < \omega_\alpha$, then $𝑡^\alpha < 𝑡$ , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If $\rho =\omega_\alpha $, then $𝑡^\alpha = 𝑡$. This case occurs when sample size > 15.
