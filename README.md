@@ -51,10 +51,7 @@ test for differential expression or screen of gene g using
 
 $$t_{g}^\alpha=\frac{\rho_{g}}{\omega_\alpha}t_{g}$$
 
-
-
-
-
+$\alpha$
 
 where $\omega_\alpha$ is an averaged null $\rho$ under statistical significance $\alpha$, used as threshold for $\rho $. If $\rho > \omega_\alpha$, then $𝑡^\alpha > 𝑡$, meaning t-value is inflated. This case happens when there is significant difference between conditions. If $\rho < \omega_\alpha$, then $𝑡^\alpha < 𝑡$ , meaning t-value is shrunken. This case happens when there is no significant difference between two data. If $\rho =\omega_\alpha$, then $𝑡^\alpha = 𝑡$. This case occurs when sample size > 15. In current differential analysis of RNA-seq, NBBt-test has the lowest type I error rate and the best performance in small samples.
 
