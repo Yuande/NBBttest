@@ -9,12 +9,7 @@ Figure 1. Statistical effect of small samples
 The dataset was simulated from 10,000 experiments with two conditions randomly sampled from a negative binomial distribution NB(100, 50). a: variances distribution along mean. b: sorted variances along experiments. c: Probability of gap occurring between two datasets.
 
 To handle these two statistical effects, we introduce a variable called gene-wise or isoform-wise inflation-shrinkage variable: 
-```math
-\sqrt{x}
-```
-```math
-\rho_{gi}=\sqrt{\varphi_{gi}\zeta_{gi}}
-```
+
 where 
 
 $$\varphi_{gi}=max\left[\frac{min(X_{gAi})}{max(X_{gBi})},\frac{min(X_{gBi})}{max(X_{gAi})}\right]$$
@@ -38,7 +33,7 @@ where k=1 for A and 2 for B.
 
 $$\rho_{gi} > 1$$ 
 
-means that thera is a gap between data A and B for isoform i within gene g, 
+means that there is a gap between data A and B for isoform i within gene g, 
 
 $$\rho_{gi}<1$$
 
